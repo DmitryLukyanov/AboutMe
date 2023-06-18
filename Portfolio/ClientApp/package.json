@@ -1,6 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
+  "homepage": "https://DmitryLukyanov.github.io/AboutMe",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -54,6 +55,8 @@
     "nth-check": "^3.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "prestart": "node aspnetcore-https && node aspnetcore-react",
     "start": "rimraf ./build && react-scripts start",
     "build": "react-scripts build",
