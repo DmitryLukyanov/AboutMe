@@ -6,7 +6,7 @@ export let colors = ["rgb(0,255,164)", "rgb(166,104,255)"];
 export const info = {
     firstName: "Dima",
     lastName: "Lukyanov",
-    selfPortrait: self, 
+    selfPortrait: self,
     gradient: `-webkit-linear-gradient(135deg, ${colors})`,
     baseColor: colors[0],
     miniBio: [
@@ -29,16 +29,6 @@ export const info = {
     ],
     socials: [
         {
-            link: "https://www.facebook.com/dm.lukyanov/",
-            icon: 'fa fa-facebook',
-            label: 'facebook'
-        },
-        {
-            link: "https://instagram.com/dm_lk",
-            icon: 'fa fa-instagram',
-            label: 'instagram'
-        },
-        {
             link: "https://github.com/DmitryLukyanov",
             icon: "fa fa-github",
             label: 'github'
@@ -52,15 +42,25 @@ export const info = {
             link: "https://stackoverflow.com/users/9492730/dododo",
             icon: "fa fa-stack-overflow",
             label: 'stackoverflow'
+        },
+        {
+            link: "https://www.facebook.com/dm.lukyanov/",
+            icon: 'fa fa-facebook',
+            label: 'facebook'
+        },
+        {
+            link: "https://instagram.com/dm_lk",
+            icon: 'fa fa-instagram',
+            label: 'instagram'
         }
     ],
     bio: "Hey! I'm Dima. I'm a backend engineer who can in frount-end. " +
-         "I love all kinds of technologies and living close to a beach so I can drink my coffee every morning while looking at the waves!",
+        "I love all kinds of technologies and living close to a beach so I can drink my coffee every morning while looking at the waves!",
     skills:
-        {
-            proficientWith: ['.NET', 'Mongo', 'Azure', 'Sql', 'Bash'],
-            exposedTo: ['node', 'F#', 'ML']
-        }
+    {
+        proficientWith: ['.NET', 'Mongo', 'Azure', 'Sql', 'Bash'],
+        exposedTo: ['node', 'F#', 'ML']
+    }
     ,
     hobbies: [
         {
@@ -79,9 +79,243 @@ export const info = {
     portfolio: [
         {
             title: "MongoDB",
-            live: "https://mongodb.com",
             source: "https://github.com/mongodb/mongo-csharp-driver",
-            image: mongo
+            image: mongo,
+            technologies: [
+                {
+                    description: "Core",
+                    list: [
+                        ".NET",
+                        "LINQ",
+                        "EntityFramework",
+                        "Mongo",
+                        "Javascript",
+                        "Bash",
+                        "Python",
+                        "Java",
+                        "C++ and P/Invokes"]
+                },
+                {
+                    description: "Clouds",
+                    list: [
+                        "Mongo Atlas",
+                        "Aws EC2",
+                        "Aws S3",
+                        "Aws Lambda",
+                        "Aws KMS",
+                        "Aws IAM",
+                        "Azure KMS",
+                        "GCP Kms"]
+                },
+                {
+                    description: "CI",
+                    list: ["Evergreen"]
+                },
+                {
+                    description: "Notable areas",
+                    list: ["Client side encryption", "Compression"]
+                }
+            ]
+        },
+        {
+            title: "MongoDB",
+            source: "https://github.com/mongodb/mongo-csharp-driver",
+            image: mongo,
+            technologies: [
+                {
+                    description: "Core",
+                    list: [
+                        ".NET",
+                        "LINQ",
+                        "EntityFramework",
+                        "Mongo",
+                        "Javascript",
+                        "Bash",
+                        "Python",
+                        "Java",
+                        "C++ and P/Invokes"]
+                },
+                {
+                    description: "Clouds",
+                    list: [
+                        "Mongo Atlas",
+                        "Aws EC2",
+                        "Aws S3",
+                        "Aws Lambda",
+                        "Aws KMS",
+                        "Aws IAM",
+                        "Azure KMS",
+                        "GCP Kms"]
+                },
+                {
+                    description: "CI",
+                    list: ["Evergreen"]
+                },
+                {
+                    description: "Notable areas",
+                    list: ["Client side encryption", "Compression"]
+                }
+            ]
+        },
+        {
+            title: "MongoDB",
+            source: "https://github.com/mongodb/mongo-csharp-driver",
+            image: mongo,
+            technologies: [
+                {
+                    description: "Core",
+                    list: [
+                        ".NET",
+                        "LINQ",
+                        "EntityFramework",
+                        "Mongo",
+                        "Javascript",
+                        "Bash",
+                        "Python",
+                        "Java",
+                        "C++ and P/Invokes"]
+                },
+                {
+                    description: "Clouds",
+                    list: [
+                        "Mongo Atlas",
+                        "Aws EC2",
+                        "Aws S3",
+                        "Aws Lambda",
+                        "Aws KMS",
+                        "Aws IAM",
+                        "Azure KMS",
+                        "GCP Kms"]
+                },
+                {
+                    description: "CI",
+                    list: ["Evergreen"]
+                },
+                {
+                    description: "Notable areas",
+                    list: ["Client side encryption", "Compression"]
+                }
+            ]
+        },
+        {
+            title: "MongoDB",
+            source: "https://github.com/mongodb/mongo-csharp-driver",
+            image: mongo,
+            technologies: [
+                {
+                    description: "Core",
+                    list: [
+                        ".NET",
+                        "LINQ",
+                        "EntityFramework",
+                        "Mongo",
+                        "Javascript",
+                        "Bash",
+                        "Python",
+                        "Java",
+                        "C++ and P/Invokes"]
+                },
+                {
+                    description: "Clouds",
+                    list: [
+                        "Mongo Atlas",
+                        "Aws EC2",
+                        "Aws S3",
+                        "Aws Lambda",
+                        "Aws KMS",
+                        "Aws IAM",
+                        "Azure KMS",
+                        "GCP Kms"]
+                },
+                {
+                    description: "CI",
+                    list: ["Evergreen"]
+                },
+                {
+                    description: "Notable areas",
+                    list: ["Client side encryption", "Compression"]
+                }
+            ]
+        },
+        {
+            title: "MongoDB",
+            source: "https://github.com/mongodb/mongo-csharp-driver",
+            image: mongo,
+            technologies: [
+                {
+                    description: "Core",
+                    list: [
+                        ".NET",
+                        "LINQ",
+                        "EntityFramework",
+                        "Mongo",
+                        "Javascript",
+                        "Bash",
+                        "Python",
+                        "Java",
+                        "C++ and P/Invokes"]
+                },
+                {
+                    description: "Clouds",
+                    list: [
+                        "Mongo Atlas",
+                        "Aws EC2",
+                        "Aws S3",
+                        "Aws Lambda",
+                        "Aws KMS",
+                        "Aws IAM",
+                        "Azure KMS",
+                        "GCP Kms"]
+                },
+                {
+                    description: "CI",
+                    list: ["Evergreen"]
+                },
+                {
+                    description: "Notable areas",
+                    list: ["Client side encryption", "Compression"]
+                }
+            ]
+        },
+        {
+            title: "MongoDB",
+            source: "https://github.com/mongodb/mongo-csharp-driver",
+            image: mongo,
+            technologies: [
+                {
+                    description: "Core",
+                    list: [
+                        ".NET",
+                        "LINQ",
+                        "EntityFramework",
+                        "Mongo",
+                        "Javascript",
+                        "Bash",
+                        "Python",
+                        "Java",
+                        "C++ and P/Invokes"]
+                },
+                {
+                    description: "Clouds",
+                    list: [
+                        "Mongo Atlas",
+                        "Aws EC2",
+                        "Aws S3",
+                        "Aws Lambda",
+                        "Aws KMS",
+                        "Aws IAM",
+                        "Azure KMS",
+                        "GCP Kms"]
+                },
+                {
+                    description: "CI",
+                    list: ["Evergreen"]
+                },
+                {
+                    description: "Notable areas",
+                    list: ["Client side encryption", "Compression"]
+                }
+            ]
         }
     ]
 }

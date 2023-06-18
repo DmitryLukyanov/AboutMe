@@ -1,7 +1,18 @@
 @import "../variables.modules";
 
 nav {
-  transition: $transition;
+    transition: $transition;
+    font: 12px 'opensans-bold', sans-serif;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    margin: 0 auto;
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: white;
+    border: 1px solid gray;
 }
 
 .active {
@@ -20,4 +31,8 @@ li {
 
 .link:hover {
   color: unset;
+}
+
+.shadowed2 {
+    border: 10px solid red;
 }
