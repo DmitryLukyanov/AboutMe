@@ -17,7 +17,8 @@ export default function Home() {
                 flexDirection={{ xs: 'column', md: 'row' }}
                 alignItems={'center'}
                 justifyContent={'center'}
-                minHeight={'calc(100vh)'}
+                /* 101vh to allow home page be a bit bigger than the start page to trigger correct events in waypoint */
+                minHeight={'calc(101vh)'}
             >
                 <Box className={classNames(Style.avatar, Style.shadowed)} alt={'image of developer'} style={{ background: info.gradient }} component={'img'} src={me} width={{ xs: '35vh', md: '40vh' }}
                     height={{ xs: '35vh', md: '40vh' }}
