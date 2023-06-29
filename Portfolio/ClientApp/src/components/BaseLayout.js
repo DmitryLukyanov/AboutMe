@@ -6,7 +6,6 @@ import About from "./about/About";
 import Portfolio from "./portfolio/Portfolio";
 import { Box, Grid } from "@mui/material";
 import Fade from "react-awesome-reveal";
-import { Waypoint } from 'react-waypoint';
 
 export default function BaseLayout() {
     let [darkMode, setDarkMode] = useState(false);
@@ -28,10 +27,10 @@ export default function BaseLayout() {
         }
     }, [])
 
-    const firstRef = useRef();
-    const secondRef = useRef();
-    const thirdRef = useRef();
-    const [currentSection, setCurrentSection] = useState();
+    const firstRef = useRef("home");
+    const secondRef = useRef("home");
+    const thirdRef = useRef("home");
+    const [currentSection, setCurrentSection] = useState({ id: "home"});
 
     useEffect(() => {
         setCurrentSection(firstRef.current);
@@ -54,10 +53,9 @@ export default function BaseLayout() {
 
         const currentSection = sectionPositions.find(
             (section) =>
-                scrollPosition >= section.offsetTop &&
+                scrollPosition >= section.offsetTop - 1 &&
                 scrollPosition < section.offsetTop + windowHeight
         );
-
         if (currentSection) {
             setCurrentSection(currentSection);
         }
@@ -74,7 +72,7 @@ export default function BaseLayout() {
             <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'} className="scrollableContainer"
                 justifyContent={'space-between'}>
                 <Grid item>
-                    <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} section={currentSection.id} />
+                    <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} handleScroll={handleScroll} section={currentSection.id} />
                 </Grid>
                 <Grid id="home" item flexGrow={1} className={Style.firstContentRow} ref={firstRef}>
                     <Home />

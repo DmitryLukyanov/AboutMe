@@ -23,7 +23,7 @@ const links = [
     }
 ]
 
-export default function Navbar({ darkMode, handleClick, section }) {
+export default function Navbar({ darkMode, handleClick, handleScroll, section }) {
     return (
         <Box component={'nav'} width={'100%'}>
             <Box component={'ul'} display={'flex'} justifyContent={'center'} alignItems={'center'}
