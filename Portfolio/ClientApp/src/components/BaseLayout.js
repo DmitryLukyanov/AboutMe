@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Style from './BaseLayout.module.scss'
 import Navbar from "./Navbar";
 import Home from "./home/Home";
@@ -28,46 +28,63 @@ export default function BaseLayout() {
         }
     }, [])
 
+    const firstRef = useRef();
+    const secondRef = useRef();
+    const thirdRef = useRef();
     const [currentSection, setCurrentSection] = useState();
+
+    useEffect(() => {
+        setCurrentSection(firstRef.current);
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+
+        const sectionPositions = [
+            firstRef.current,
+            secondRef.current,
+            thirdRef.current
+        ];
+
+        const currentSection = sectionPositions.find(
+            (section) =>
+                scrollPosition >= section.offsetTop &&
+                scrollPosition < section.offsetTop + windowHeight
+        );
+
+        if (currentSection) {
+            setCurrentSection(currentSection);
+        }
+    };
+
     useEffect(() => {
         if (currentSection) {
-            console.log("current section is ", currentSection);
-        } else {
-            setCurrentSection("home"); // we want to set current section to one when the component mounts
+            console.log("Current section: ", currentSection.id);
         }
     }, [currentSection]);
 
     return (
         <Box className={darkMode ? Style.dark : Style.light}>
-            <Waypoint
-                onEnter={() => {
-                    setCurrentSection("home");
-                }}
-            />
             <Grid container display={'flex'} flexDirection={'column'} minHeight={'100vh'} className="scrollableContainer"
                 justifyContent={'space-between'}>
                 <Grid item>
-                    <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} section={currentSection} />
+                    <Navbar darkMode={darkMode} handleClick={handleToggleDarkMode} section={currentSection.id} />
                 </Grid>
-                <Grid item flexGrow={1} className={Style.firstContentRow}>
+                <Grid id="home" item flexGrow={1} className={Style.firstContentRow} ref={firstRef}>
                     <Home />
                 </Grid>
-                <Waypoint
-                    onEnter={() => {
-                        setCurrentSection("about");
-                    }}
-                />
-                <Grid item flexGrow={1} >
+                <Grid id="about" item flexGrow={1} ref={secondRef} >
                     <Fade bottom triggerOnce={true} className={Style.secondContentRow}>
                         <About />
                     </Fade>
                 </Grid>
-                <Waypoint
-                    onEnter={() => {
-                        setCurrentSection("portfolio");
-                    }}
-                />
-                <Grid item flexGrow={1} className={Style.firstContentRow}>
+                <Grid id="portfolio" item flexGrow={1} className={Style.firstContentRow} ref={thirdRef}>
                     <Fade bottom triggerOnce={true}>
                         <Portfolio />
                     </Fade>
