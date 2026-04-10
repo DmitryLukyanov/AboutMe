@@ -6,13 +6,15 @@
 
 ## A Short Story
 
-There once was a developer named Dmitry who loved turning ideas into elegant software. Every morning he would sit down with a fresh cup of coffee, open his editor, and ask himself one simple question: *"What can I build today?"*
+It started with curiosity.
 
-He wasn't chasing fame or fortune — he was chasing the quiet satisfaction of a bug finally squashed, a feature finally shipped, a user finally smiling. One line of code at a time, he crafted tools that solved real problems and told stories that mattered.
+Dmitry was twelve years old when he first wrote a program that made a computer do exactly what he wanted. It wasn't impressive — just a few lines that printed his name on the screen — but in that moment, something clicked. The machine listened. He had spoken in its language, and it had answered.
 
-This portfolio is one of those stories — a small window into the projects, passions, and curiosities of a developer who believes that great software is equal parts logic and heart.
+Years passed, languages changed, frameworks rose and fell, but that feeling never did. Whether debugging a tricky race condition at midnight or sketching out the architecture of something new, Dmitry kept chasing that same spark: the thrill of solving hard problems and building things that actually work.
 
-Welcome. Take a look around.
+This portfolio is a snapshot of that journey — projects born from late nights, bright ideas, and a stubborn refusal to leave "good enough" alone.
+
+Come in and have a look.
 
 ---
 
