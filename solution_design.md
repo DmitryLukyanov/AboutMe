@@ -22,3 +22,9 @@ This is a personal portfolio web application hosted at [dmitrylukyanov.github.io
 ## Deployment
 
 The app is built and deployed to GitHub Pages via a GitHub Actions workflow (`.github/workflows/node.js.yml`).
+
+## Future Work
+
+- Expand portfolio content
+- Add project showcase section
+- Improve UI/UX design
