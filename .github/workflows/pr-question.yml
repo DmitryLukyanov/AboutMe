@@ -1,0 +1,23 @@
+name: Ask question on PR
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  ask-question:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Post question comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '👋 @' + context.payload.pull_request.user.login + ' — **Are you ready to start?**'
+            });
