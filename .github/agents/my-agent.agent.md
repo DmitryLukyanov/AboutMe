@@ -9,7 +9,7 @@ description: Main PR agent
 ---
 
 # Phase 1
-Create a new empty file called
+Create a new empty file called "solution_design.md"
 
 # Phase 2
 
@@ -21,13 +21,6 @@ Call this command:
 For the linked PR, call the following command:
 
 
-     gh pr comment <PR_NUMBER> --body "❓ **BLOCKING QUESTION – HUMAN INPUT REQUIRED**
-
-I cannot safely proceed because this decision impacts behavior.
-
-**Question:**
-Should we return `null` or throw a domain exception when the entity is not found?
-
-Please reply to this comment to continue."
+     gh pr comment <PR_NUMBER> --body "Task is completed"
 
 where PR_NUMBER is a number of linked PR 
